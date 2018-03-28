@@ -5,6 +5,7 @@
 		private $tag;
 		private $attributes;
 		private $selfClosing;
+		private $children=[];
 		public function __construct($tag, $attributes=[], $selfClosing=false){
 			$this->tag=$tag;
 			$this->attributes=$attributes;
@@ -29,8 +30,14 @@
 				$output.=">";
 			}
 			if (!$this->selfClosing){
+				foreach ($this->children as $element){
+					$output.=$element->render();
+				}
 				$output.="</".$this->tag.">";
 			}
 			return $output;
+		}
+		public function addElement(Node $element){
+			$this->children[]=$element;
 		}
 	}

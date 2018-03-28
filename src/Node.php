@@ -1,11 +1,15 @@
 <?php
 	namespace HTreeML;
 
-	class Node{
+	use HTreeML\ElementInterface;
+	use HTreeML\String;
+
+	class Node implements ElementInterface{
 		private $tag;
 		private $attributes;
 		private $selfClosing;
 		private $children=[];
+		private $strings=[];
 		public function __construct($tag, $attributes=[], $selfClosing=false){
 			$this->tag=$tag;
 			$this->attributes=$attributes;
@@ -37,7 +41,10 @@
 			}
 			return $output;
 		}
-		public function addElement(Node $element){
+		public function addElement(ElementInterface $element){
 			$this->children[]=$element;
+		}
+		public function addString($string){
+			$this->addElement(new String($string));
 		}
 	}

@@ -11,7 +11,7 @@
 			$this->selfClosing=$selfClosing;
 		}
 		public function __get($attribute){
-			return isset($this->attributes[$attribute])?$this->attributes[$attribute:null;
+			return isset($this->attributes[$attribute])?$this->attributes[$attribute]:null;
 		}
 		public function __set($attribute, $value){
 			$previous=$this->attributes[$attribute];

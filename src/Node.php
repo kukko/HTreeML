@@ -45,6 +45,23 @@
 			}
 			return $output;
 		}
+		public function __call($methodName, $arguments){
+			if (strpos($methodName, "add")!==false && strlen($methodName)>3 && ctype_upper(substr($methodName, 3, 1))){
+				$attributeName=substr($methodName, 3);
+				$attributeName=isset($this->attributes[$attributeName])?$attributeName:lcfirst($attributeName);
+				if (isset($this->attributes[$attributeName])){
+					if (is_array($this->attributes[$attributeName])){
+						$this->attributes[$attributeName][]=$arguments[0];
+					}
+					else{
+						$this->attributes[$attributeName].=" ".$arguments[0];
+					}
+				}
+				else{
+					$this->attributes[$attributeName]=$arguments[0];
+				}
+			}
+		}
 		public function addElement(ElementInterface $element){
 			$this->children[]=$element;
 		}

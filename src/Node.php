@@ -19,8 +19,12 @@
 			return isset($this->attributes[$attribute])?$this->attributes[$attribute]:null;
 		}
 		public function __set($attribute, $value){
-			$previous=$this->attributes[$attribute];
-			return ($this->attributes[$attribute]=$value)===$previous;
+			$alreadySetted=isset($this->attributes[$attribute]);
+			if ($alreadySetted){
+				$previous=$this->attributes[$attribute];
+			}
+			$this->attributes[$attribute]=$value;
+			return (!$alreadySetted && $this->attributes[$attribute]===$value) || ($alreadySetted && ($this->attributes[$attribute])===$previous);
 		}
 		public function render(){
 			$output="<".$this->tag;

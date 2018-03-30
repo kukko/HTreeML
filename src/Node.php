@@ -50,4 +50,8 @@
 		public function clearContent(){
 			$this->children=[];
 		}
+		public function setContent(ElementInterface $element){
+			$this->clearContent();
+			$this->addElement($element);
+		}
 	}

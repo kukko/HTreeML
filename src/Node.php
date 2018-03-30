@@ -47,4 +47,7 @@
 		public function addString($string){
 			$this->addElement(new String($string));
 		}
+		public function clearContent(){
+			$this->children=[];
+		}
 	}

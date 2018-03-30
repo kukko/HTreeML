@@ -61,6 +61,10 @@
 					$this->attributes[$attributeName]=$arguments[0];
 				}
 			}
+			if (strpos($methodName, "insert")!==false && strlen($methodName)>6){
+				$tagName=substr($methodName, 6);
+				$this->addElement(new Node($tagName, isset($arguments[0]) && is_array($arguments[0])?$arguments[0]:[], isset($arguments[1])?$arguments[1]:false));
+			}
 		}
 		public function addElement(ElementInterface $element){
 			$this->children[]=$element;

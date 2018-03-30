@@ -60,6 +60,7 @@
 				else{
 					$this->attributes[$attributeName]=$arguments[0];
 				}
+				return $this;
 			}
 			if (strpos($methodName, "insert")!==false && strlen($methodName)>6){
 				$tagName=substr($methodName, 6);

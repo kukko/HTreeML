@@ -54,4 +54,8 @@
 			$this->clearContent();
 			$this->addElement($element);
 		}
+		public function setContentString($string){
+			$this->clearContent();
+			$this->addString($string);
+		}
 	}

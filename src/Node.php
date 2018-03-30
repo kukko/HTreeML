@@ -9,7 +9,6 @@
 		private $attributes;
 		private $selfClosing;
 		private $children=[];
-		private $strings=[];
 		public function __construct($tag, $attributes=[], $selfClosing=false){
 			$this->tag=$tag;
 			$this->attributes=$attributes;

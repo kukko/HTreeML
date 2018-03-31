@@ -1,8 +1,8 @@
 <?php
-	namespace HTreeML;
+	namespace kukko\HTreeML;
 
-	use HTreeML\ElementInterface;
-	use HTreeML\String;
+	use kukko\HTreeML\ElementInterface;
+	use kukko\HTreeML\String;
 
 	class Node implements ElementInterface{
 		private $tag;

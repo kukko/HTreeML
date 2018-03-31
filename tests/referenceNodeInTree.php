@@ -1,6 +1,6 @@
 <?php
 	require __DIR__ . '/../vendor/autoload.php';
-	use HTreeML\Node;
+	use kukko\HTreeML\Node;
 
 	$div=new Node("div");
 	$div->style="color:#0000FF;";

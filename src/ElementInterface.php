@@ -1,5 +1,5 @@
 <?php
-	namespace HTreeML;
+	namespace kukko\HTreeML;
 
 	interface ElementInterface{
 		public function render();

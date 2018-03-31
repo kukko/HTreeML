@@ -1,6 +1,6 @@
 <?php
 	require __DIR__ . '/../vendor/autoload.php';
-	use HTreeML\Node;
+	use kukko\HTreeML\Node;
 
 	echo "Not defining the attribute at instantiating and then add it.".PHP_EOL;
 	$div=new Node("div");

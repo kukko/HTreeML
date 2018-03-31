@@ -1,7 +1,7 @@
 <?php
-	namespace HTreeML;
+	namespace kukko\HTreeML;
 
-	use HTreeML\ElementInterface;
+	use kukko\HTreeML\ElementInterface;
 
 	class String implements ElementInterface{
 		private $string;

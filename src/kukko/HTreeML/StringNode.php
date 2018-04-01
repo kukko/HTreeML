@@ -3,7 +3,7 @@
 
 	use kukko\HTreeML\ElementInterface;
 
-	class String implements ElementInterface{
+	class StringNode implements ElementInterface{
 		private $string;
 		public function __construct($string){
 			$this->string=$string;

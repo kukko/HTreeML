@@ -2,7 +2,7 @@
 	namespace kukko\HTreeML;
 
 	use kukko\HTreeML\ElementInterface;
-	use kukko\HTreeML\String;
+	use kukko\HTreeML\StringNode;
 
 	class Node implements ElementInterface{
 		private $tag;
@@ -71,7 +71,7 @@
 			return $element;
 		}
 		public function addString($string){
-			$this->addElement(new String($string));
+			$this->addElement(new StringNode($string));
 		}
 		public function clearContent(){
 			$this->children=[];

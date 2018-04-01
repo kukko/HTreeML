@@ -1,7 +1,25 @@
 {
-	"autoload":{
-		"psr-4":{
-			"HTreeML\\":"src"
+	"name":"kukko/HTreeML",
+	"description":"Generate complete HTML object tree.",
+	"license":"MIT",
+	"keywords":[
+		"HTML"
+	],
+	"homepage":"https://github.com/kukko/HTreeML",
+	"authors":[
+		{
+			"name":"kukko"
 		}
-	}
+	],
+	"autoload":{
+		"psr-0":{
+			"kukko\\HTreeML\\":"src"
+		}
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/weaverryan/derp-dangerzone"
+		}
+	]
 }
